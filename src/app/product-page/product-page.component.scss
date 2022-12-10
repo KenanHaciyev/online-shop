@@ -1,0 +1,25 @@
+img{
+  height: 260px;
+  width: 200px;
+}
+
+.product{
+  .header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  h2{
+    margin-bottom: .5rem;
+  }
+}
+
+.flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+.item{
+  width: 25%;
+}
