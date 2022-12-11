@@ -9,6 +9,7 @@ import { OrdersPageComponent } from './orders-page/orders-page.component';
 import {RouterModule} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AuthGuard} from "../shared/auth.guard";
+import {SearchPipe} from "../shared/search.pipe";
 
 
 
@@ -20,6 +21,7 @@ import {AuthGuard} from "../shared/auth.guard";
     DashboardPageComponent,
     EditPageComponent,
     OrdersPageComponent,
+    SearchPipe
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,7 @@ import {AuthGuard} from "../shared/auth.guard";
           {path: 'dashboard', component: DashboardPageComponent, canActivate: [AuthGuard]},
           {path: 'add', component: AddPageComponent, canActivate: [AuthGuard]},
           {path: 'orders', component: OrdersPageComponent, canActivate: [AuthGuard]},
-          {path: 'admin/:id/edit', component: EditPageComponent, canActivate: [AuthGuard]},
+          {path: 'product/:id/edit', component: EditPageComponent, canActivate: [AuthGuard]},
         ]
       }
     ])

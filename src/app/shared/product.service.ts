@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {map} from 'rxjs/operators';
+import {Product} from "../interfaces";
 
 @Injectable({
   providedIn: 'root'
@@ -50,4 +51,13 @@ export class ProductService {
         })
       )
   }
+
+  remove(id:string) {
+    return this.http.delete(`${environment.fbUrl}/product/${id}.json`)
+  }
+
+  update(product:Product) {
+    return this.http.patch(`${environment.fbUrl}/product/${product.id}.json`, product)
+  }
+
 }

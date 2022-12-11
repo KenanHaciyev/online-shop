@@ -35,7 +35,7 @@
     <label for="price">Price</label>
     <input type="price" id="price" formControlName="price">
     <div class="validation" *ngIf="form.get('price')?.touched && form.get('price')?.invalid">
-      <small *ngIf="form.get('price')?.errors?.['required']">Choose type</small>
+      <small *ngIf="form.get('price')?.errors?.['required']">Enter price</small>
     </div>
   </div>
 
