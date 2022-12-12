@@ -20,4 +20,8 @@ export class ProductPageComponent implements OnInit {
     this.product$ = this.productServ.getById(this.productId)
 
   }
+
+  addToCart(product: Product) {
+    this.productServ.addToCart(product)
+  }
 }

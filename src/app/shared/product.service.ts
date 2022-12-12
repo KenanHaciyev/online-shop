@@ -8,7 +8,8 @@ import {Product} from "../interfaces";
   providedIn: 'root'
 })
 export class ProductService {
-
+  type:string='Phone'
+  productsCart:Product[]=[]
   constructor(private http: HttpClient) {
   }
 
@@ -60,4 +61,11 @@ export class ProductService {
     return this.http.patch(`${environment.fbUrl}/product/${product.id}.json`, product)
   }
 
+  setType(type:string){
+    this.type = type
+  }
+
+  addToCart(product:Product) {
+    this.productsCart.push(product)
+  }
 }
