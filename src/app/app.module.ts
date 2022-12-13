@@ -11,6 +11,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AuthInterceptor} from "./shared/auth.interceptor";
 import { ProductComponent } from './product/product.component';
 import { SortingPipe } from './shared/sorting.pipe';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,11 +23,12 @@ import { SortingPipe } from './shared/sorting.pipe';
     ProductComponent,
     SortingPipe,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+    ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
