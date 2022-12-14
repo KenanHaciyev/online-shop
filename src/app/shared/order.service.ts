@@ -26,7 +26,7 @@ export class OrderService {
   }
 
   getAll() {
-    return this.http.get(`${environment.fbUrl}/product.json`)
+    return this.http.get(`${environment.fbUrl}/orders.json`)
       .pipe(
         map((res: any) => {
           return Object.keys(res)

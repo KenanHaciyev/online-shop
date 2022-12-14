@@ -1,7 +1,6 @@
 <div class="container">
   <div *ngIf="cartProducts.length; else empty">
     <h2 class="text-center">Your cart</h2>
-
     <table>
       <tbody>
       <tr *ngFor="let product of cartProducts">
@@ -24,6 +23,7 @@
   </ng-template>
 
   <h2 class="text-center">Delivery</h2>
+  <h5 *ngIf="added" class="added" >Order is framed</h5>
 
   <form [formGroup]="form" (ngSubmit)="submit()">
 

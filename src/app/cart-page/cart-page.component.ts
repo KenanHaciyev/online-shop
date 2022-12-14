@@ -14,7 +14,7 @@ export class CartPageComponent implements OnInit {
   totalPrice: number = 0
   form: FormGroup
   submitted: boolean;
-
+  added:string;
   constructor(private productServ: ProductService,
               private orderServ: OrderService) {
   }
@@ -53,6 +53,14 @@ export class CartPageComponent implements OnInit {
     this.orderServ.send(order).subscribe(res => {
       this.form.reset()
       this.submitted = false
+      this.added = 'Order is framed'
+      this.cartProducts = []
+      setTimeout(() => {
+        this.added = ''
+      },2000)
+      alert('For checking orders - let`s go to admin page,' +
+        'tap on "Online shop" in the left and write in url "/admin", ' +
+        'login is: admin@mail.com, password is: 123456')
     })
   }
 
