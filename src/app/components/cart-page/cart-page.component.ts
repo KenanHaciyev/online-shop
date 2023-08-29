@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ProductService} from "../shared/product.service";
-import {Product} from "../interfaces";
+import {ProductService} from "../../shared/product.service";
+import {Product} from "../../interfaces";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {OrderService} from "../shared/order.service";
+import {OrderService} from "../../shared/order.service";
 
 @Component({
   selector: 'app-cart-page',
